@@ -1,0 +1,385 @@
+{
+  "request": {
+    "path": "/api/ships",
+    "params": {
+      "project": "courier-world",
+      "limit": 5
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "x-request-id": "61af968b-ebe7-4afe-b32e-a212a7977853",
+      "x-hey-api-version": "1"
+    },
+    "body": {
+      "query": {
+        "limit": 5,
+        "offset": 0,
+        "project": "courier-world",
+        "sort": "latest"
+      },
+      "total": 3,
+      "items": [
+        {
+          "id": "6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+          "title": "Code changes, week of 2026-10-12 – 2026-10-18",
+          "summary": "5 active days in builder-one/courierworld.",
+          "eventType": "CODE_ACTIVITY",
+          "publishedAt": "2026-10-12T19:23:25.000Z",
+          "detectedAt": "2026-10-12T01:57:01.194Z",
+          "precision": "WEEK",
+          "evidenceId": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+          "verification": "SOURCE_LINKED",
+          "sourceUrl": "https://github.com/builder-one/courierworld",
+          "codeSubstance": {
+            "verdict": "SUBSTANTIVE",
+            "classifierVersion": "commit-substance-v3",
+            "countsAsBuilding": true,
+            "commitsListed": 21,
+            "commitsRead": 1,
+            "changedCode": 1,
+            "documentationOrMaintenance": 0,
+            "substanceUnknown": 0,
+            "notRead": 20,
+            "files": {
+              "source": 1,
+              "test": 0,
+              "docs": 0,
+              "readme": 0,
+              "dependency": 0,
+              "config": 0,
+              "ci": 0,
+              "generated": 0,
+              "asset": 0,
+              "whitespace": 0,
+              "rename": 0,
+              "data": 0,
+              "unknown": 0
+            },
+            "weekFullyListed": true,
+            "automatedCommits": 0,
+            "sampled": false,
+            "basis": null,
+            "summary": "This week HEY looked inside 1 of 21 commits to see what changed: 1 changed code. One code change is enough for the week to count, so HEY stopped there."
+          },
+          "codeWeek": {
+            "isoWeek": "2026-w42",
+            "start": "2026-10-12T00:00:00.000Z",
+            "end": "2026-10-19T00:00:00.000Z",
+            "repository": "builder-one/courierworld",
+            "commits": 21,
+            "commitsAtLeast": false,
+            "commitsUrl": "https://github.com/builder-one/courierworld/commits?since=2026-10-12T00%3A00%3A00.000Z&until=2026-10-19T00%3A00%3A00.000Z",
+            "highlights": [
+              {
+                "subject": "Chat: scroll back through the history",
+                "sha": "ea9299cb2a1ee029af2db3cc191f39552616e517",
+                "committedAt": "2026-10-12T01:54:55.000Z",
+                "readAsCode": true,
+                "url": "https://github.com/builder-one/courierworld/commit/ea9299cb2a1ee029af2db3cc191f39552616e517"
+              },
+              {
+                "subject": "CourierPad: fix the IMD audit's findings (still not deployed)",
+                "sha": "8f5358691d6b1bd34ed6cb5b5697bfb44169bceb",
+                "committedAt": "2026-10-12T19:23:25.000Z",
+                "readAsCode": false,
+                "url": "https://github.com/builder-one/courierworld/commit/8f5358691d6b1bd34ed6cb5b5697bfb44169bceb"
+              },
+              {
+                "subject": "Launchpad in the game: Times Square's corner tower (waiting on the pad deploy)",
+                "sha": "9fb6185a9b9e1058dd8201a84e53c2891964d787",
+                "committedAt": "2026-10-12T18:53:11.000Z",
+                "readAsCode": false,
+                "url": "https://github.com/builder-one/courierworld/commit/9fb6185a9b9e1058dd8201a84e53c2891964d787"
+              }
+            ],
+            "title": "Code changes, week of 2026-10-12 – 2026-10-18 · 21 commits"
+          },
+          "project": {
+            "slug": "courier-world",
+            "name": "Courier World",
+            "symbol": "STAMP",
+            "shortDescription": "First Play to Earn on IMD",
+            "projectKind": "OTHER",
+            "activityStatus": "SHIPPING",
+            "researchLevel": "VERIFIED_BUILDER",
+            "catalogStatus": "VERIFIED_BUILDER",
+            "stillBuilding": false,
+            "stillBuildingState": "NOT_HELD",
+            "lastShippedAt": "2026-10-12T19:23:25.000Z",
+            "primaryNarrative": {
+              "slug": "gaming",
+              "name": "Gaming"
+            },
+            "token": {
+              "chainId": 4663,
+              "contractAddress": "0xbab43af01c32a952ff14b395d026cf1874932bc5"
+            },
+            "websiteUrl": "https://courierworld.fun/",
+            "officialX": {
+              "handle": "example_project",
+              "url": "https://x.com/example_project"
+            },
+            "marketCap": {
+              "usd": 99516,
+              "source": "dexscreener",
+              "kind": "fdv",
+              "observedAt": "2026-10-12T19:44:25.993Z"
+            },
+            "liquidity": {
+              "usd": 32418.9,
+              "source": "dexscreener",
+              "observedAt": "2026-10-12T19:44:25.993Z",
+              "kind": "market"
+            },
+            "volume24h": {
+              "usd": 157535.65,
+              "source": "dexscreener",
+              "observedAt": "2026-10-12T19:44:25.993Z"
+            },
+            "launchStage": "DEX",
+            "tokenMarket": {
+              "status": "ACTIVE_MARKET",
+              "reason": "liquidity_and_volume"
+            },
+            "tokenVerification": {
+              "status": "VERIFIED",
+              "reason": "deploy_record_in_own_repo"
+            },
+            "venue": "DEX",
+            "trades24h": {
+              "buys": 1043,
+              "sells": 1468,
+              "source": "dexscreener",
+              "observedAt": "2026-10-12T19:44:25.993Z"
+            },
+            "priceChange24hPct": 65.7,
+            "hasBuilderSource": true,
+            "logoUrl": "https://cdn.dexscreener.com/cms/images/DHhz8KN6KFDfbXSL?width=64&height=64&fit=crop&quality=95&format=auto",
+            "url": "https://heyresearch.xyz/project/courier-world"
+          },
+          "url": "https://heyresearch.xyz/project/courier-world#ship-6d9ec4f3-d4a4-468b-b6b0-f1717bb07632"
+        },
+        {
+          "id": "318faf02-bdc7-40c7-916d-847b110927b5",
+          "title": "Code changes, week of 2026-10-05 – 2026-10-11",
+          "summary": "4 active days in builder-one/courierworld.",
+          "eventType": "CODE_ACTIVITY",
+          "publishedAt": "2026-10-11T18:33:22.000Z",
+          "detectedAt": "2026-10-11T01:23:54.783Z",
+          "precision": "WEEK",
+          "evidenceId": "ship:318faf02-bdc7-40c7-916d-847b110927b5",
+          "verification": "SOURCE_LINKED",
+          "sourceUrl": "https://github.com/builder-one/courierworld",
+          "codeSubstance": {
+            "verdict": "SUBSTANTIVE",
+            "classifierVersion": "commit-substance-v3",
+            "countsAsBuilding": true,
+            "commitsListed": 47,
+            "commitsRead": 3,
+            "changedCode": 3,
+            "documentationOrMaintenance": 0,
+            "substanceUnknown": 0,
+            "notRead": 44,
+            "files": {
+              "source": 20,
+              "test": 0,
+              "docs": 0,
+              "readme": 1,
+              "dependency": 0,
+              "config": 2,
+              "ci": 0,
+              "generated": 0,
+              "asset": 8,
+              "whitespace": 0,
+              "rename": 0,
+              "data": 0,
+              "unknown": 0
+            },
+            "weekFullyListed": true,
+            "automatedCommits": 0,
+            "sampled": true,
+            "basis": null,
+            "summary": "This week HEY looked inside 3 of 47 commits to see what changed: 3 changed code. In a burst week, enough of a sample has to change code for the week to count."
+          },
+          "codeWeek": {
+            "isoWeek": "2026-w41",
+            "start": "2026-10-05T00:00:00.000Z",
+            "end": "2026-10-12T00:00:00.000Z",
+            "repository": "builder-one/courierworld",
+            "commits": 47,
+            "commitsAtLeast": false,
+            "commitsUrl": "https://github.com/builder-one/courierworld/commits?since=2026-10-05T00%3A00%3A00.000Z&until=2026-10-12T00%3A00%3A00.000Z",
+            "highlights": [
+              {
+                "subject": "Adam, DOg PEt and Donal Trum come to town",
+                "sha": "076577aaa4736359fc7649fd6314fa4abd44e1de",
+                "committedAt": "2026-10-10T23:58:39.000Z",
+                "readAsCode": true,
+                "url": "https://github.com/builder-one/courierworld/commit/076577aaa4736359fc7649fd6314fa4abd44e1de"
+              },
+              {
+                "subject": "Office leaderboard, and the offices standing on the planet",
+                "sha": "0caa6d5722ad51b985b4467170390c5878ae7887",
+                "committedAt": "2026-10-10T11:23:32.000Z",
+                "readAsCode": true,
+                "url": "https://github.com/builder-one/courierworld/commit/0caa6d5722ad51b985b4467170390c5878ae7887"
+              },
+              {
+                "subject": "In-game $STAMP trading, and a fork mode for dev.sh",
+                "sha": "0a2ce30357882180a87365514d7e9e6800700537",
+                "committedAt": "2026-10-08T13:38:14.000Z",
+                "readAsCode": true,
+                "url": "https://github.com/builder-one/courierworld/commit/0a2ce30357882180a87365514d7e9e6800700537"
+              }
+            ],
+            "title": "Code changes, week of 2026-10-05 – 2026-10-11 · 47 commits"
+          },
+          "project": {
+            "slug": "courier-world",
+            "name": "Courier World",
+            "symbol": "STAMP",
+            "shortDescription": "First Play to Earn on IMD",
+            "projectKind": "OTHER",
+            "activityStatus": "SHIPPING",
+            "researchLevel": "VERIFIED_BUILDER",
+            "catalogStatus": "VERIFIED_BUILDER",
+            "stillBuilding": false,
+            "stillBuildingState": "NOT_HELD",
+            "lastShippedAt": "2026-10-12T19:23:25.000Z",
+            "primaryNarrative": {
+              "slug": "gaming",
+              "name": "Gaming"
+            },
+            "token": {
+              "chainId": 4663,
+              "contractAddress": "0xbab43af01c32a952ff14b395d026cf1874932bc5"
+            },
+            "websiteUrl": "https://courierworld.fun/",
+            "officialX": {
+              "handle": "example_project",
+              "url": "https://x.com/example_project"
+            },
+            "marketCap": {
+              "usd": 99516,
+              "source": "dexscreener",
+              "kind": "fdv",
+              "observedAt": "2026-10-12T19:44:25.993Z"
+            },
+            "liquidity": {
+              "usd": 32418.9,
+              "source": "dexscreener",
+              "observedAt": "2026-10-12T19:44:25.993Z",
+              "kind": "market"
+            },
+            "volume24h": {
+              "usd": 157535.65,
+              "source": "dexscreener",
+              "observedAt": "2026-10-12T19:44:25.993Z"
+            },
+            "launchStage": "DEX",
+            "tokenMarket": {
+              "status": "ACTIVE_MARKET",
+              "reason": "liquidity_and_volume"
+            },
+            "tokenVerification": {
+              "status": "VERIFIED",
+              "reason": "deploy_record_in_own_repo"
+            },
+            "venue": "DEX",
+            "trades24h": {
+              "buys": 1043,
+              "sells": 1468,
+              "source": "dexscreener",
+              "observedAt": "2026-10-12T19:44:25.993Z"
+            },
+            "priceChange24hPct": 65.7,
+            "hasBuilderSource": true,
+            "logoUrl": "https://cdn.dexscreener.com/cms/images/DHhz8KN6KFDfbXSL?width=64&height=64&fit=crop&quality=95&format=auto",
+            "url": "https://heyresearch.xyz/project/courier-world"
+          },
+          "url": "https://heyresearch.xyz/project/courier-world#ship-318faf02-bdc7-40c7-916d-847b110927b5"
+        },
+        {
+          "id": "c2b3ae76-1217-4e5a-85b8-bd47077edf11",
+          "title": "Deployed a new contract: CourierSkins",
+          "summary": "The account that launched Courier World’s token deployed CourierSkins at 0x1971…d23e on 2026-10-11. Read from the chain; the creating transaction is the evidence.",
+          "eventType": "CONTRACT_DEPLOY_FOLLOWUP",
+          "publishedAt": "2026-10-11T18:29:59.000Z",
+          "detectedAt": "2026-10-12T04:05:05.155Z",
+          "precision": "EXACT",
+          "evidenceId": "ship:c2b3ae76-1217-4e5a-85b8-bd47077edf11",
+          "verification": "PUBLICLY_VERIFIED",
+          "sourceUrl": "https://robinhoodchain.blockscout.com/address/0x19716daade3f2979aaa4f69cc04e2a5c00e7d23e",
+          "project": {
+            "slug": "courier-world",
+            "name": "Courier World",
+            "symbol": "STAMP",
+            "shortDescription": "First Play to Earn on IMD",
+            "projectKind": "OTHER",
+            "activityStatus": "SHIPPING",
+            "researchLevel": "VERIFIED_BUILDER",
+            "catalogStatus": "VERIFIED_BUILDER",
+            "stillBuilding": false,
+            "stillBuildingState": "NOT_HELD",
+            "lastShippedAt": "2026-10-12T19:23:25.000Z",
+            "primaryNarrative": {
+              "slug": "gaming",
+              "name": "Gaming"
+            },
+            "token": {
+              "chainId": 4663,
+              "contractAddress": "0xbab43af01c32a952ff14b395d026cf1874932bc5"
+            },
+            "websiteUrl": "https://courierworld.fun/",
+            "officialX": {
+              "handle": "example_project",
+              "url": "https://x.com/example_project"
+            },
+            "marketCap": {
+              "usd": 99516,
+              "source": "dexscreener",
+              "kind": "fdv",
+              "observedAt": "2026-10-12T19:44:25.993Z"
+            },
+            "liquidity": {
+              "usd": 32418.9,
+              "source": "dexscreener",
+              "observedAt": "2026-10-12T19:44:25.993Z",
+              "kind": "market"
+            },
+            "volume24h": {
+              "usd": 157535.65,
+              "source": "dexscreener",
+              "observedAt": "2026-10-12T19:44:25.993Z"
+            },
+            "launchStage": "DEX",
+            "tokenMarket": {
+              "status": "ACTIVE_MARKET",
+              "reason": "liquidity_and_volume"
+            },
+            "tokenVerification": {
+              "status": "VERIFIED",
+              "reason": "deploy_record_in_own_repo"
+            },
+            "venue": "DEX",
+            "trades24h": {
+              "buys": 1043,
+              "sells": 1468,
+              "source": "dexscreener",
+              "observedAt": "2026-10-12T19:44:25.993Z"
+            },
+            "priceChange24hPct": 65.7,
+            "hasBuilderSource": true,
+            "logoUrl": "https://cdn.dexscreener.com/cms/images/DHhz8KN6KFDfbXSL?width=64&height=64&fit=crop&quality=95&format=auto",
+            "url": "https://heyresearch.xyz/project/courier-world"
+          },
+          "url": "https://heyresearch.xyz/project/courier-world#ship-c2b3ae76-1217-4e5a-85b8-bd47077edf11"
+        }
+      ],
+      "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+    }
+  }
+}

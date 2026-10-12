@@ -1,0 +1,30 @@
+{
+  "request": {
+    "path": "/api/search/suggest",
+    "params": {
+      "q": "0xbab43af01c32a952ff14b395d026cf1874932bc5"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "x-request-id": "fd46356c-a438-4fb7-920e-946b7c0b8087",
+      "x-hey-api-version": "1"
+    },
+    "body": {
+      "q": "0xbab43af01c32a952ff14b395d026cf1874932bc5",
+      "suggestions": [
+        {
+          "type": "project",
+          "name": "Courier World",
+          "symbol": "STAMP",
+          "contract": "0xbab43af01c32a952ff14b395d026cf1874932bc5",
+          "target": "/project/courier-world",
+          "status": "Shipping · Verified Builder"
+        }
+      ],
+      "moreLaunchRecords": false
+    }
+  }
+}

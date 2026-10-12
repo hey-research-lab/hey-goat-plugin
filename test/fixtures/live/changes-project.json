@@ -1,0 +1,393 @@
+{
+  "request": {
+    "path": "/api/agent/what_changed",
+    "params": {
+      "project": "courier-world",
+      "days": 30,
+      "limit": 5,
+      "building": "only"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "x-request-id": "a6e0e39d-a7e2-4fca-ae15-503f9203cf63",
+      "x-hey-api-version": "1"
+    },
+    "body": {
+      "schema": "hey.agent-intelligence-response",
+      "schemaVersion": "1",
+      "capability": "what_changed",
+      "status": "ok",
+      "query": {
+        "chainId": 4663,
+        "project": "courier-world",
+        "days": 30,
+        "limit": 5,
+        "building": "only"
+      },
+      "chain": {
+        "chainId": 4663,
+        "name": "Robinhood Chain"
+      },
+      "subject": {
+        "kind": "project",
+        "project": {
+          "slug": "courier-world",
+          "name": {
+            "text": "Courier World",
+            "contentOrigin": "external_source",
+            "source": "project_record"
+          },
+          "url": "https://heyresearch.xyz/project/courier-world",
+          "token": {
+            "chainId": 4663,
+            "address": "0xbab43af01c32a952ff14b395d026cf1874932bc5"
+          }
+        }
+      },
+      "answer": {
+        "text": "3 changes that count as building recorded for courier-world in the last 30 days (2 weeks of code activity, 1 follow-up contract deployment); showing the newest 3. HEY’s ledger records status moves and its other reclassifications only since 2026-09-26; before that they are absent here, not zero.",
+        "contentOrigin": "derived"
+      },
+      "answerStatus": "FACT",
+      "claims": [
+        {
+          "id": "window.counts_as_building",
+          "dimension": "build",
+          "statement": {
+            "text": "3 of 3 changes count toward activity status in the 30-day window.",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 3,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [
+            {
+              "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "sourceUrl": "https://github.com/builder-one/courierworld"
+            },
+            {
+              "id": "ship:318faf02-bdc7-40c7-916d-847b110927b5",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A318faf02-bdc7-40c7-916d-847b110927b5",
+              "sourceUrl": "https://github.com/builder-one/courierworld"
+            },
+            {
+              "id": "ship:c2b3ae76-1217-4e5a-85b8-bd47077edf11",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3Ac2b3ae76-1217-4e5a-85b8-bd47077edf11",
+              "sourceUrl": "https://robinhoodchain.blockscout.com/address/0x19716daade3f2979aaa4f69cc04e2a5c00e7d23e"
+            }
+          ],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.build.code_activity",
+          "dimension": "build",
+          "statement": {
+            "text": "2 weeks of code activity in the 30-day window (build.code_activity).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 2,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [
+            {
+              "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "sourceUrl": "https://github.com/builder-one/courierworld"
+            },
+            {
+              "id": "ship:318faf02-bdc7-40c7-916d-847b110927b5",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A318faf02-bdc7-40c7-916d-847b110927b5",
+              "sourceUrl": "https://github.com/builder-one/courierworld"
+            }
+          ],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.contract.followup_deployed",
+          "dimension": "contract",
+          "statement": {
+            "text": "1 follow-up contract deployment in the 30-day window (contract.followup_deployed).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 1,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [
+            {
+              "id": "ship:c2b3ae76-1217-4e5a-85b8-bd47077edf11",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3Ac2b3ae76-1217-4e5a-85b8-bd47077edf11",
+              "sourceUrl": "https://robinhoodchain.blockscout.com/address/0x19716daade3f2979aaa4f69cc04e2a5c00e7d23e"
+            }
+          ],
+          "evidenceKind": "ledger_count"
+        }
+      ],
+      "unknowns": [
+        {
+          "category": "NOT_MEASURED",
+          "dimension": "officialDocs",
+          "statement": {
+            "text": "HEY read its website and found no link to docs.",
+            "contentOrigin": "hey"
+          },
+          "doNotConclude": {
+            "text": "HEY has not measured this. Do not read it as zero, as absent or as negative evidence about the project.",
+            "contentOrigin": "hey"
+          },
+          "coverageState": "NO_SOURCE",
+          "reason": "no_docs_link_found",
+          "asOf": "2026-10-11T01:11:12.502Z",
+          "detailUrl": "https://heyresearch.xyz/api/projects/courier-world/coverage"
+        },
+        {
+          "category": "INSUFFICIENT_EVIDENCE",
+          "dimension": "changeLedgerWindow",
+          "statement": {
+            "text": "The window starts 2026-09-12, before HEY’s ledger began recording status moves and reclassifications (2026-09-26). Releases and ships are indexed from their sources’ own history; the other transitions are not.",
+            "contentOrigin": "derived"
+          },
+          "doNotConclude": {
+            "text": "Do not read a count of status moves, resumptions or reclassifications as the whole window: the part before the ledger began recording them is absent, not zero.",
+            "contentOrigin": "hey"
+          },
+          "reason": "ledger_window_partial",
+          "asOf": "2026-09-26T11:32:48.791Z"
+        }
+      ],
+      "freshness": [
+        {
+          "family": "change_ledger",
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "dataAsOf": "2026-10-12T19:50:01.462Z",
+          "freshnessStatus": "live",
+          "staleAfterHours": 1,
+          "refresh": {
+            "job": "PROJECT_CHANGE_EVENTS",
+            "everyMinutes": 5,
+            "slowestMinutes": 5,
+            "basis": {
+              "text": "The ledger projector runs every 5 minutes and indexes what HEY recorded since its last run.",
+              "contentOrigin": "hey"
+            }
+          },
+          "nextExpectedRefresh": "2026-10-12T19:55:01.462Z"
+        }
+      ],
+      "evidence": [
+        {
+          "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+          "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+          "sourceUrl": "https://github.com/builder-one/courierworld"
+        },
+        {
+          "id": "ship:318faf02-bdc7-40c7-916d-847b110927b5",
+          "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A318faf02-bdc7-40c7-916d-847b110927b5",
+          "sourceUrl": "https://github.com/builder-one/courierworld"
+        },
+        {
+          "id": "ship:c2b3ae76-1217-4e5a-85b8-bd47077edf11",
+          "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3Ac2b3ae76-1217-4e5a-85b8-bd47077edf11",
+          "sourceUrl": "https://robinhoodchain.blockscout.com/address/0x19716daade3f2979aaa4f69cc04e2a5c00e7d23e"
+        }
+      ],
+      "data": {
+        "scope": "project",
+        "window": {
+          "days": 30,
+          "from": "2026-09-12T19:52:26.362Z",
+          "to": "2026-10-12T19:52:26.362Z",
+          "basis": "occurred_else_detected"
+        },
+        "types": null,
+        "total": 3,
+        "countsAsBuilding": 3,
+        "byType": [
+          {
+            "type": "build.code_activity",
+            "count": 2
+          },
+          {
+            "type": "contract.followup_deployed",
+            "count": 1
+          }
+        ],
+        "shown": 3,
+        "items": [
+          {
+            "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+            "revision": 12,
+            "type": "build.code_activity",
+            "domain": "build",
+            "occurredAt": "2026-10-12T19:23:25.000Z",
+            "precision": "WEEK",
+            "detectedAt": "2026-10-12T01:57:01.194Z",
+            "recordedAt": "2026-10-12T19:25:00.994Z",
+            "summary": {
+              "text": "Code changes, week of 2026-10-12 – 2026-10-18",
+              "contentOrigin": "derived"
+            },
+            "status": "FACT",
+            "countsAsBuilding": true,
+            "verification": "SOURCE_LINKED",
+            "project": {
+              "slug": "courier-world",
+              "url": "https://heyresearch.xyz/project/courier-world"
+            },
+            "evidence": [
+              {
+                "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+                "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+                "sourceUrl": "https://github.com/builder-one/courierworld"
+              }
+            ],
+            "source": "github"
+          },
+          {
+            "id": "ship:318faf02-bdc7-40c7-916d-847b110927b5",
+            "revision": 6,
+            "type": "build.code_activity",
+            "domain": "build",
+            "occurredAt": "2026-10-11T18:33:22.000Z",
+            "precision": "WEEK",
+            "detectedAt": "2026-10-11T01:23:54.783Z",
+            "recordedAt": "2026-10-11T19:10:02.129Z",
+            "summary": {
+              "text": "Code changes, week of 2026-10-05 – 2026-10-11",
+              "contentOrigin": "derived"
+            },
+            "status": "FACT",
+            "countsAsBuilding": true,
+            "verification": "SOURCE_LINKED",
+            "project": {
+              "slug": "courier-world",
+              "url": "https://heyresearch.xyz/project/courier-world"
+            },
+            "evidence": [
+              {
+                "id": "ship:318faf02-bdc7-40c7-916d-847b110927b5",
+                "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A318faf02-bdc7-40c7-916d-847b110927b5",
+                "sourceUrl": "https://github.com/builder-one/courierworld"
+              }
+            ],
+            "source": "github"
+          },
+          {
+            "id": "ship:c2b3ae76-1217-4e5a-85b8-bd47077edf11",
+            "revision": 2,
+            "type": "contract.followup_deployed",
+            "domain": "contract",
+            "occurredAt": "2026-10-11T18:29:59.000Z",
+            "precision": "EXACT",
+            "detectedAt": "2026-10-12T04:05:05.155Z",
+            "recordedAt": "2026-10-12T04:10:26.077Z",
+            "summary": {
+              "text": "Deployed a new contract: CourierSkins",
+              "contentOrigin": "external_source",
+              "source": "source_title",
+              "sourceUrl": "https://robinhoodchain.blockscout.com/address/0x19716daade3f2979aaa4f69cc04e2a5c00e7d23e"
+            },
+            "status": "FACT",
+            "countsAsBuilding": true,
+            "verification": "PUBLICLY_VERIFIED",
+            "project": {
+              "slug": "courier-world",
+              "url": "https://heyresearch.xyz/project/courier-world"
+            },
+            "evidence": [
+              {
+                "id": "ship:c2b3ae76-1217-4e5a-85b8-bd47077edf11",
+                "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3Ac2b3ae76-1217-4e5a-85b8-bd47077edf11",
+                "sourceUrl": "https://robinhoodchain.blockscout.com/address/0x19716daade3f2979aaa4f69cc04e2a5c00e7d23e"
+              }
+            ],
+            "source": "explorer"
+          }
+        ],
+        "ledger": {
+          "projectorRanAt": "2026-10-12T19:50:01.462Z",
+          "newestRecordedAt": "2026-10-12T19:50:01.462Z",
+          "collectionStart": "2026-09-26T11:35:57.227Z",
+          "transitionsFrom": "2026-09-26T11:32:48.791Z"
+        },
+        "more": "https://heyresearch.xyz/api/changes?project=courier-world"
+      },
+      "methodology": {
+        "rules": [
+          {
+            "id": "agent_freshness",
+            "version": "agent-freshness-v2"
+          },
+          {
+            "id": "machine_text",
+            "version": "machine-text-v1"
+          }
+        ],
+        "url": "https://heyresearch.xyz/methodology"
+      },
+      "links": {
+        "self": "https://heyresearch.xyz/api/agent/what_changed?project=courier-world&days=30&limit=5&building=only",
+        "page": "https://heyresearch.xyz/project/courier-world",
+        "canonical": [
+          "https://heyresearch.xyz/api/changes?project=courier-world"
+        ]
+      },
+      "citation": {
+        "kind": "hey_agent_answer",
+        "capability": "what_changed",
+        "schemaVersion": "1",
+        "url": "https://heyresearch.xyz/api/agent/what_changed?project=courier-world&days=30&limit=5&building=only",
+        "asOf": "2026-10-12T19:52:26.362Z",
+        "project": "courier-world"
+      },
+      "boundaries": {
+        "notAdvice": true,
+        "notProvided": [
+          "investment_recommendation",
+          "buy_or_sell_signal",
+          "price_prediction",
+          "price_target",
+          "position_size",
+          "leverage",
+          "stop_loss",
+          "ranking_by_expected_return",
+          "risk_score",
+          "safety_verdict",
+          "smart_money_label",
+          "wallet_pnl",
+          "wallet_profile"
+        ],
+        "marketIsContextOnly": true,
+        "disclaimer": {
+          "text": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts.",
+          "contentOrigin": "hey"
+        }
+      },
+      "asOf": "2026-10-12T19:52:26.362Z"
+    }
+  }
+}

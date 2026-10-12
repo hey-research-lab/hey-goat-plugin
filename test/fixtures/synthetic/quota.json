@@ -1,0 +1,21 @@
+{
+  "_note": "Synthetic: a keyed client whose monthly allowance is used.",
+  "request": {
+    "path": "/api/ships",
+    "params": { "project": "courier-world", "limit": 5 }
+  },
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-type": "application/json",
+      "x-hey-api-version": "1",
+      "x-request-id": "00000000-0000-4000-8000-000000000430"
+    },
+    "body": {
+      "error": "quota",
+      "message": "The monthly allowance for this API key is used.",
+      "requestId": "00000000-0000-4000-8000-000000000430",
+      "retryable": false
+    }
+  }
+}

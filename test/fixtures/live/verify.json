@@ -1,0 +1,201 @@
+{
+  "request": {
+    "path": "/api/agent/verify_project",
+    "params": {
+      "address": "0xbab43af01c32a952ff14b395d026cf1874932bc5"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "x-request-id": "95484262-04f8-4b31-a5e4-a9399cafb88a",
+      "x-hey-api-version": "1"
+    },
+    "body": {
+      "schema": "hey.agent-intelligence-response",
+      "schemaVersion": "1",
+      "capability": "verify_project",
+      "status": "ok",
+      "query": {
+        "chainId": 4663,
+        "address": "0xbab43af01c32a952ff14b395d026cf1874932bc5"
+      },
+      "chain": {
+        "chainId": 4663,
+        "name": "Robinhood Chain"
+      },
+      "subject": {
+        "kind": "contract",
+        "contract": {
+          "chainId": 4663,
+          "address": "0xbab43af01c32a952ff14b395d026cf1874932bc5"
+        },
+        "project": {
+          "slug": "courier-world",
+          "name": {
+            "text": "Courier World",
+            "contentOrigin": "external_source",
+            "source": "project_record"
+          },
+          "url": "https://heyresearch.xyz/project/courier-world"
+        }
+      },
+      "answer": {
+        "text": "VERIFIED: the project \"courier-world\" itself names 0xbab43af01c32a952ff14b395d026cf1874932bc5. This is attribution, not a safety reading.",
+        "contentOrigin": "derived"
+      },
+      "answerStatus": "FACT",
+      "claims": [
+        {
+          "id": "verify.verdict",
+          "dimension": "contract",
+          "statement": {
+            "text": "VERIFIED (token_deploy_record_in_own_repo): HEY records this contract as the project’s tracked token. A deploy record in the project’s own official repository names this contract on this chain.",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": "VERIFIED",
+          "source": {
+            "name": "project’s own repository",
+            "type": "builder_source"
+          },
+          "observedAt": "2026-10-11T03:16:06.423Z",
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "weekly",
+          "evidence": [],
+          "evidenceKind": "registry_record",
+          "explainUrl": "https://heyresearch.xyz/api/projects/courier-world/explain?fact=token.verification",
+          "reason": "token_deploy_record_in_own_repo"
+        },
+        {
+          "id": "verify.recorded_project",
+          "dimension": "contract",
+          "statement": {
+            "text": "HEY records this contract under \"courier-world\" as its tracked token.",
+            "contentOrigin": "derived"
+          },
+          "status": "DERIVED",
+          "value": "courier-world",
+          "source": {
+            "name": "contract registry",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-11T03:16:06.423Z",
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "weekly",
+          "evidence": [],
+          "explainUrl": "https://heyresearch.xyz/api/token/4663/0xbab43af01c32a952ff14b395d026cf1874932bc5",
+          "evidenceKind": "registry_record",
+          "reason": "recorded_as_token"
+        }
+      ],
+      "unknowns": [],
+      "freshness": [
+        {
+          "family": "contracts",
+          "observedAt": "2026-10-11T02:21:40.510Z",
+          "dataAsOf": "2026-10-11T02:21:40.510Z",
+          "freshnessStatus": "weekly",
+          "staleAfterHours": 252,
+          "refresh": {
+            "job": "CONTRACT_ABI_WATCH",
+            "everyMinutes": 60,
+            "slowestMinutes": 10080,
+            "basis": {
+              "text": "The contract upgrade and interface watches run hourly over batches of watched contracts; how soon one contract is read again depends on the batch, within 7 days. A reading is stale after one and a half of those.",
+              "contentOrigin": "hey"
+            }
+          },
+          "nextExpectedRefresh": null,
+          "nextExpectedRefreshReason": "variable_cadence"
+        }
+      ],
+      "evidence": [],
+      "data": {
+        "chainId": 4663,
+        "address": "0xbab43af01c32a952ff14b395d026cf1874932bc5",
+        "verdict": "VERIFIED",
+        "reasonCode": "token_deploy_record_in_own_repo",
+        "reasons": [
+          {
+            "text": "HEY records this contract as the project’s tracked token.",
+            "contentOrigin": "hey"
+          },
+          {
+            "text": "A deploy record in the project’s own official repository names this contract on this chain.",
+            "contentOrigin": "hey"
+          }
+        ],
+        "recordedProject": {
+          "slug": "courier-world",
+          "url": "https://heyresearch.xyz/project/courier-world",
+          "role": "token"
+        },
+        "askedProject": null,
+        "tokenVerification": {
+          "status": "VERIFIED",
+          "reason": "deploy_record_in_own_repo"
+        },
+        "activityAppliesToContract": true,
+        "contractUrl": "https://heyresearch.xyz/api/contracts/4663/0xbab43af01c32a952ff14b395d026cf1874932bc5",
+        "scanUrl": "https://heyresearch.xyz/scan/0xbab43af01c32a952ff14b395d026cf1874932bc5"
+      },
+      "methodology": {
+        "rules": [
+          {
+            "id": "agent_freshness",
+            "version": "agent-freshness-v2"
+          },
+          {
+            "id": "machine_text",
+            "version": "machine-text-v1"
+          }
+        ],
+        "url": "https://heyresearch.xyz/methodology"
+      },
+      "links": {
+        "self": "https://heyresearch.xyz/api/agent/verify_project?address=0xbab43af01c32a952ff14b395d026cf1874932bc5",
+        "page": "https://heyresearch.xyz/project/courier-world",
+        "canonical": [
+          "https://heyresearch.xyz/api/token/4663/0xbab43af01c32a952ff14b395d026cf1874932bc5",
+          "https://heyresearch.xyz/api/contracts/4663/0xbab43af01c32a952ff14b395d026cf1874932bc5"
+        ]
+      },
+      "citation": {
+        "kind": "hey_agent_answer",
+        "capability": "verify_project",
+        "schemaVersion": "1",
+        "url": "https://heyresearch.xyz/api/agent/verify_project?address=0xbab43af01c32a952ff14b395d026cf1874932bc5",
+        "asOf": "2026-10-12T19:52:32.902Z",
+        "project": "courier-world"
+      },
+      "boundaries": {
+        "notAdvice": true,
+        "notProvided": [
+          "investment_recommendation",
+          "buy_or_sell_signal",
+          "price_prediction",
+          "price_target",
+          "position_size",
+          "leverage",
+          "stop_loss",
+          "ranking_by_expected_return",
+          "risk_score",
+          "safety_verdict",
+          "smart_money_label",
+          "wallet_pnl",
+          "wallet_profile"
+        ],
+        "marketIsContextOnly": true,
+        "disclaimer": {
+          "text": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts.",
+          "contentOrigin": "hey"
+        }
+      },
+      "asOf": "2026-10-12T19:52:32.902Z"
+    }
+  }
+}

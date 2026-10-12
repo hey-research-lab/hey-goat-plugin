@@ -1,0 +1,38 @@
+{
+  "request": {
+    "path": "/api/search/suggest",
+    "params": {
+      "q": "Courier Worl"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "x-request-id": "0a92d669-7995-46ab-8127-39060aba8158",
+      "x-hey-api-version": "1"
+    },
+    "body": {
+      "q": "Courier Worl",
+      "suggestions": [
+        {
+          "type": "project",
+          "name": "Courier World",
+          "symbol": "STAMP",
+          "contract": "0xbab43af01c32a952ff14b395d026cf1874932bc5",
+          "target": "/project/courier-world",
+          "status": "Shipping · Verified Builder"
+        },
+        {
+          "type": "launch",
+          "name": "Play Courier World",
+          "symbol": "STAMP",
+          "contract": "0x991a0cc14c62ce481ecd3796ec06c2b9c6582c35",
+          "launchedVia": "Pons",
+          "target": "/search?q=0x991a0cc14c62ce481ecd3796ec06c2b9c6582c35"
+        }
+      ],
+      "moreLaunchRecords": false
+    }
+  }
+}

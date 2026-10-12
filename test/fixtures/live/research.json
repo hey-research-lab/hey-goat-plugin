@@ -1,0 +1,923 @@
+{
+  "request": {
+    "path": "/api/agent/research_project",
+    "params": {
+      "project": "courier-world"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "x-request-id": "254b3ec9-e536-4458-a318-5193259e10bc",
+      "x-hey-api-version": "1"
+    },
+    "body": {
+      "schema": "hey.agent-intelligence-response",
+      "schemaVersion": "1",
+      "capability": "research_project",
+      "status": "ok",
+      "query": {
+        "chainId": 4663,
+        "project": "courier-world"
+      },
+      "chain": {
+        "chainId": 4663,
+        "name": "Robinhood Chain"
+      },
+      "subject": {
+        "kind": "project",
+        "project": {
+          "slug": "courier-world",
+          "name": {
+            "text": "Courier World",
+            "contentOrigin": "external_source",
+            "source": "project_record"
+          },
+          "url": "https://heyresearch.xyz/project/courier-world",
+          "token": {
+            "chainId": 4663,
+            "address": "0xbab43af01c32a952ff14b395d026cf1874932bc5"
+          }
+        }
+      },
+      "answer": {
+        "text": "courier-world: activity status SHIPPING, last meaningful ship 2026-10-12; 3 meaningful events in 30 days. HEY lists 4 things it does not know (2 NOT_MEASURED, 1 NOT_VERIFIED, 1 INSUFFICIENT_EVIDENCE) under unknowns.",
+        "contentOrigin": "derived"
+      },
+      "answerStatus": "DERIVED",
+      "claims": [
+        {
+          "id": "summary.build",
+          "dimension": "build",
+          "statement": {
+            "text": "Shipping: 3 meaningful events in 30 days; latest ship today.",
+            "contentOrigin": "derived"
+          },
+          "status": "DERIVED",
+          "value": null,
+          "source": {
+            "name": "hey",
+            "type": "hey_rule"
+          },
+          "observedAt": "2026-10-12T19:23:25.000Z",
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "recent",
+          "evidence": [
+            {
+              "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "sourceUrl": "https://github.com/builder-one/courierworld"
+            }
+          ],
+          "explainUrl": "https://heyresearch.xyz/api/projects/courier-world/timeline",
+          "evidenceKind": "evidence_record"
+        },
+        {
+          "id": "summary.usage",
+          "dimension": "usage",
+          "statement": {
+            "text": "2 of 2 watched contracts active · 37,470 calls over the 3 of 7 days HEY holds (14,168 calls to the contracts' own functions); the rest unknown, not zero.",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": null,
+          "source": {
+            "name": "decoded contract calls",
+            "type": "chain"
+          },
+          "observedAt": "2026-10-12T01:00:58.902Z",
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "daily",
+          "evidence": [],
+          "explainUrl": "https://heyresearch.xyz/api/projects/courier-world/usage",
+          "reason": "collection_started_in_window",
+          "contextOnly": true,
+          "evidenceKind": "usage_reading"
+        },
+        {
+          "id": "summary.market",
+          "dimension": "market",
+          "statement": {
+            "text": "Active market · FDV (fully diluted) $99.5K · current liquidity $32.4K · reading under an hour old (DEX Screener).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": null,
+          "source": {
+            "name": "market readings",
+            "type": "market_provider"
+          },
+          "observedAt": "2026-10-12T19:44:25.993Z",
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "live",
+          "evidence": [],
+          "explainUrl": "https://heyresearch.xyz/api/projects/courier-world/market",
+          "contextOnly": true,
+          "evidenceKind": "market_reading"
+        },
+        {
+          "id": "summary.contract",
+          "dimension": "contract",
+          "statement": {
+            "text": "2 contracts watched, 2 with verified source; latest change yesterday: Deployed a new contract: CourierSkins.",
+            "contentOrigin": "external_source",
+            "source": "research_summary_quoting_source",
+            "sourceUrl": "https://robinhoodchain.blockscout.com/address/0x19716daade3f2979aaa4f69cc04e2a5c00e7d23e"
+          },
+          "status": "FACT",
+          "value": null,
+          "source": {
+            "name": "Explorer",
+            "type": "chain"
+          },
+          "observedAt": "2026-10-11T01:16:58.469Z",
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "weekly",
+          "evidence": [
+            {
+              "id": "ship:c2b3ae76-1217-4e5a-85b8-bd47077edf11",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3Ac2b3ae76-1217-4e5a-85b8-bd47077edf11",
+              "sourceUrl": "https://robinhoodchain.blockscout.com/address/0x19716daade3f2979aaa4f69cc04e2a5c00e7d23e"
+            }
+          ],
+          "explainUrl": "https://heyresearch.xyz/api/projects/courier-world/contracts",
+          "evidenceKind": "evidence_record"
+        },
+        {
+          "id": "summary.latestChange",
+          "dimension": "latestChange",
+          "statement": {
+            "text": "Today: Code changes, week of 2026-10-12 – 2026-10-18.",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": null,
+          "source": {
+            "name": "GitHub",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:23:25.000Z",
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "recent",
+          "evidence": [
+            {
+              "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "sourceUrl": "https://github.com/builder-one/courierworld"
+            }
+          ],
+          "explainUrl": "https://heyresearch.xyz/api/changes?project=courier-world",
+          "evidenceKind": "evidence_record"
+        },
+        {
+          "id": "summary.unknown",
+          "dimension": "unknown",
+          "statement": {
+            "text": "2 gaps: Official docs (no source), API description (no source). HEY read its website and found no link to docs.",
+            "contentOrigin": "derived"
+          },
+          "status": "UNKNOWN",
+          "value": null,
+          "source": null,
+          "observedAt": null,
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "unknown",
+          "evidence": [],
+          "explainUrl": "https://heyresearch.xyz/api/projects/courier-world/coverage",
+          "reason": "no_docs_link_found",
+          "evidenceKind": "not_held"
+        },
+        {
+          "id": "build.activity_status",
+          "dimension": "build",
+          "statement": {
+            "text": "Activity status SHIPPING under HEY's activity rule (hbm-v28).",
+            "contentOrigin": "derived"
+          },
+          "status": "DERIVED",
+          "value": "SHIPPING",
+          "source": {
+            "name": "hey",
+            "type": "hey_rule"
+          },
+          "observedAt": "2026-10-12T19:35:11.189Z",
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "recent",
+          "evidence": [
+            {
+              "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A6d9ec4f3-d4a4-468b-b6b0-f1717bb07632"
+            },
+            {
+              "id": "ship:318faf02-bdc7-40c7-916d-847b110927b5",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A318faf02-bdc7-40c7-916d-847b110927b5"
+            },
+            {
+              "id": "ship:c2b3ae76-1217-4e5a-85b8-bd47077edf11",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3Ac2b3ae76-1217-4e5a-85b8-bd47077edf11"
+            }
+          ],
+          "explainUrl": "https://heyresearch.xyz/api/projects/courier-world/explain?fact=activity.status",
+          "evidenceKind": "rule_output"
+        },
+        {
+          "id": "build.last_meaningful_ship",
+          "dimension": "build",
+          "statement": {
+            "text": "The newest meaningful ship HEY recorded is dated 2026-10-12.",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": "2026-10-12T19:23:25.000Z",
+          "source": {
+            "name": "builder sources",
+            "type": "builder_source"
+          },
+          "observedAt": "2026-10-12T19:35:11.189Z",
+          "occurredAt": "2026-10-12T19:23:25.000Z",
+          "precision": "WEEK",
+          "freshness": "recent",
+          "evidence": [
+            {
+              "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "sourceUrl": "https://github.com/builder-one/courierworld"
+            }
+          ],
+          "explainUrl": "https://heyresearch.xyz/api/projects/courier-world/explain?fact=activity.status",
+          "evidenceKind": "evidence_record"
+        },
+        {
+          "id": "build.meaningful_events_30d",
+          "dimension": "build",
+          "statement": {
+            "text": "3 meaningful building events in the last 30 days.",
+            "contentOrigin": "derived"
+          },
+          "status": "DERIVED",
+          "value": 3,
+          "source": {
+            "name": "hey",
+            "type": "hey_rule"
+          },
+          "observedAt": "2026-10-12T19:35:11.189Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "recent",
+          "evidence": [
+            {
+              "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "sourceUrl": "https://github.com/builder-one/courierworld"
+            },
+            {
+              "id": "ship:318faf02-bdc7-40c7-916d-847b110927b5",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A318faf02-bdc7-40c7-916d-847b110927b5",
+              "sourceUrl": "https://github.com/builder-one/courierworld"
+            },
+            {
+              "id": "ship:c2b3ae76-1217-4e5a-85b8-bd47077edf11",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3Ac2b3ae76-1217-4e5a-85b8-bd47077edf11",
+              "sourceUrl": "https://robinhoodchain.blockscout.com/address/0x19716daade3f2979aaa4f69cc04e2a5c00e7d23e"
+            }
+          ],
+          "explainUrl": "https://heyresearch.xyz/api/projects/courier-world/explain?fact=activity.status",
+          "evidenceKind": "rule_output"
+        },
+        {
+          "id": "build.momentum",
+          "dimension": "build",
+          "statement": {
+            "text": "Build Momentum 49.5 (0–100, from development evidence only; never price).",
+            "contentOrigin": "derived"
+          },
+          "status": "DERIVED",
+          "value": 49.5,
+          "source": {
+            "name": "hey",
+            "type": "hey_rule"
+          },
+          "observedAt": "2026-10-12T19:35:11.189Z",
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "recent",
+          "evidence": [
+            {
+              "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A6d9ec4f3-d4a4-468b-b6b0-f1717bb07632"
+            },
+            {
+              "id": "ship:318faf02-bdc7-40c7-916d-847b110927b5",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A318faf02-bdc7-40c7-916d-847b110927b5"
+            },
+            {
+              "id": "ship:c2b3ae76-1217-4e5a-85b8-bd47077edf11",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3Ac2b3ae76-1217-4e5a-85b8-bd47077edf11"
+            }
+          ],
+          "explainUrl": "https://heyresearch.xyz/api/projects/courier-world/explain?fact=build.momentum",
+          "evidenceKind": "rule_output"
+        },
+        {
+          "id": "build.still_building",
+          "dimension": "build",
+          "statement": {
+            "text": "Still Building does not hold for this project now.",
+            "contentOrigin": "hey"
+          },
+          "status": "DERIVED",
+          "value": false,
+          "source": {
+            "name": "hey",
+            "type": "hey_rule"
+          },
+          "observedAt": "2026-10-12T19:35:11.189Z",
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "recent",
+          "evidence": [],
+          "explainUrl": "https://heyresearch.xyz/api/projects/courier-world/explain?fact=still_building",
+          "evidenceKind": "rule_output"
+        },
+        {
+          "id": "contract.token_verification",
+          "dimension": "contract",
+          "statement": {
+            "text": "The project itself names this token contract (its own site, a deploy record in its own repository, or an on-chain signature).",
+            "contentOrigin": "hey"
+          },
+          "status": "FACT",
+          "value": "VERIFIED",
+          "source": {
+            "name": "project’s own voice",
+            "type": "project_site"
+          },
+          "observedAt": "2026-10-11T03:16:06.423Z",
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "weekly",
+          "evidence": [],
+          "explainUrl": "https://heyresearch.xyz/api/projects/courier-world/explain?fact=token.verification",
+          "evidenceKind": "registry_record",
+          "reason": "deploy_record_in_own_repo"
+        },
+        {
+          "id": "market.valuation",
+          "dimension": "market",
+          "statement": {
+            "text": "FDV about $99,516 from dexscreener: market context only, never a builder judgement.",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 99516,
+          "source": {
+            "name": "dexscreener",
+            "type": "market_provider"
+          },
+          "observedAt": "2026-10-12T19:44:25.993Z",
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "live",
+          "evidence": [],
+          "explainUrl": "https://heyresearch.xyz/api/projects/courier-world/explain?fact=market.valuation",
+          "contextOnly": true,
+          "evidenceKind": "market_reading"
+        }
+      ],
+      "unknowns": [
+        {
+          "category": "NOT_VERIFIED",
+          "dimension": "projectOwner",
+          "statement": {
+            "text": "No owner has proved control of this project’s site, repository or contract to HEY.",
+            "contentOrigin": "hey"
+          },
+          "doNotConclude": {
+            "text": "HEY has not verified this link. Do not treat it as the project’s own, and do not treat it as false either.",
+            "contentOrigin": "hey"
+          },
+          "reason": "owner_not_verified"
+        },
+        {
+          "category": "INSUFFICIENT_EVIDENCE",
+          "dimension": "usage",
+          "statement": {
+            "text": "HEY holds usage for only part of the window.",
+            "contentOrigin": "hey"
+          },
+          "doNotConclude": {
+            "text": "HEY has read too little of this to say. Do not treat a partial figure as the whole, or the gap as a finding.",
+            "contentOrigin": "hey"
+          },
+          "reason": "collection_started_in_window",
+          "asOf": "2026-10-12T01:00:58.902Z"
+        },
+        {
+          "category": "NOT_MEASURED",
+          "dimension": "officialDocs",
+          "statement": {
+            "text": "HEY read its website and found no link to docs.",
+            "contentOrigin": "hey"
+          },
+          "doNotConclude": {
+            "text": "HEY has not measured this. Do not read it as zero, as absent or as negative evidence about the project.",
+            "contentOrigin": "hey"
+          },
+          "coverageState": "NO_SOURCE",
+          "reason": "no_docs_link_found",
+          "asOf": "2026-10-11T01:11:12.502Z",
+          "detailUrl": "https://heyresearch.xyz/api/projects/courier-world/coverage"
+        },
+        {
+          "category": "NOT_MEASURED",
+          "dimension": "apiDocs",
+          "statement": {
+            "text": "Its website links no API description.",
+            "contentOrigin": "hey"
+          },
+          "doNotConclude": {
+            "text": "HEY has not measured this. Do not read it as zero, as absent or as negative evidence about the project.",
+            "contentOrigin": "hey"
+          },
+          "coverageState": "NO_SOURCE",
+          "reason": "no_api_description_linked",
+          "asOf": "2026-10-11T02:12:04.909Z",
+          "detailUrl": "https://heyresearch.xyz/api/projects/courier-world/coverage"
+        }
+      ],
+      "freshness": [
+        {
+          "family": "builder_sources",
+          "observedAt": "2026-10-12T19:24:35.975Z",
+          "dataAsOf": "2026-10-12T19:24:35.975Z",
+          "freshnessStatus": "recent",
+          "staleAfterHours": 72,
+          "refresh": {
+            "job": "REFRESH_GITHUB",
+            "everyMinutes": 60,
+            "slowestMinutes": 4320,
+            "basis": {
+              "text": "Repositories, release feeds and changelogs are re-read by refresh tier (HOT hourly, WARM every 6 hours, COOL daily, COLD every 3 days); the tier follows the activity status and the last meaningful ship. A failing source backs off. A reading is stale after 72 hours, or one and a half cadences of its tier where that is longer (108 hours on COLD).",
+              "contentOrigin": "hey"
+            }
+          },
+          "nextExpectedRefresh": "2026-10-12T20:24:35.975Z"
+        },
+        {
+          "family": "market",
+          "observedAt": "2026-10-12T19:44:25.993Z",
+          "dataAsOf": "2026-10-12T19:44:25.993Z",
+          "freshnessStatus": "live",
+          "staleAfterHours": 24,
+          "refresh": {
+            "job": "REFRESH_MARKET_BATCH",
+            "everyMinutes": 10,
+            "slowestMinutes": 1440,
+            "basis": {
+              "text": "Market readings are refreshed by tier (HOT every 10 minutes, WARM hourly, COOL every 6 hours, COLD daily); a token priced only by the paced fallback waits at least 2 hours, and one with no reading backs off up to 14 days. A reading is stale after 24 hours, or one and a half cadences of its tier where that is longer (36 hours on COLD).",
+              "contentOrigin": "hey"
+            }
+          },
+          "nextExpectedRefresh": "2026-10-12T19:54:25.993Z"
+        },
+        {
+          "family": "contracts",
+          "observedAt": "2026-10-11T02:21:40.510Z",
+          "dataAsOf": "2026-10-11T02:21:40.510Z",
+          "freshnessStatus": "weekly",
+          "staleAfterHours": 252,
+          "refresh": {
+            "job": "CONTRACT_ABI_WATCH",
+            "everyMinutes": 60,
+            "slowestMinutes": 10080,
+            "basis": {
+              "text": "The contract upgrade and interface watches run hourly over batches of watched contracts; how soon one contract is read again depends on the batch, within 7 days. A reading is stale after one and a half of those.",
+              "contentOrigin": "hey"
+            }
+          },
+          "nextExpectedRefresh": null,
+          "nextExpectedRefreshReason": "variable_cadence"
+        },
+        {
+          "family": "locks",
+          "observedAt": null,
+          "dataAsOf": null,
+          "freshnessStatus": "unknown",
+          "staleAfterHours": 48,
+          "refresh": {
+            "job": "SYNC_HOODLOCK",
+            "everyMinutes": 360,
+            "slowestMinutes": 360,
+            "basis": {
+              "text": "HoodLock locks and unlocks are synced every 6 hours. Only HoodLock is read; other lockers are not.",
+              "contentOrigin": "hey"
+            }
+          },
+          "nextExpectedRefresh": null,
+          "nextExpectedRefreshReason": "never_read"
+        },
+        {
+          "family": "activity_score",
+          "observedAt": "2026-10-12T19:35:11.189Z",
+          "dataAsOf": "2026-10-12T19:35:11.189Z",
+          "freshnessStatus": "recent",
+          "staleAfterHours": 24,
+          "refresh": {
+            "job": "RECALCULATE_SCORES",
+            "everyMinutes": 720,
+            "slowestMinutes": 720,
+            "basis": {
+              "text": "A project is due for rescoring once its score is 12 hours old (RESCORE_MIN_INTERVAL_HOURS); a newly recorded ship queues a rescore within the quarter hour. The next refresh is the latest expected time, not a promise: a backlog can delay it.",
+              "contentOrigin": "hey"
+            }
+          },
+          "nextExpectedRefresh": "2026-10-13T07:35:11.189Z"
+        },
+        {
+          "family": "usage",
+          "observedAt": "2026-10-12T01:00:58.902Z",
+          "dataAsOf": "2026-10-11T00:00:00.000Z",
+          "freshnessStatus": "daily",
+          "staleAfterHours": 72,
+          "refresh": {
+            "job": "ROLLUP_USAGE_DAYS",
+            "everyMinutes": 360,
+            "slowestMinutes": 360,
+            "basis": {
+              "text": "Product usage is rolled up from decoded calls every 6 hours, per UTC day, for contracts in the method watch.",
+              "contentOrigin": "hey"
+            }
+          },
+          "nextExpectedRefresh": null,
+          "nextExpectedRefreshReason": "overdue"
+        },
+        {
+          "family": "peers",
+          "observedAt": "2026-10-12T02:04:19.479Z",
+          "dataAsOf": "2026-10-12T02:04:19.479Z",
+          "freshnessStatus": "daily",
+          "staleAfterHours": 36,
+          "refresh": {
+            "job": "REFRESH_PEER_CONTEXT",
+            "everyMinutes": 1440,
+            "slowestMinutes": 1440,
+            "basis": {
+              "text": "Peer cohorts are recomputed once a day.",
+              "contentOrigin": "hey"
+            }
+          },
+          "nextExpectedRefresh": "2026-10-13T02:04:19.479Z"
+        }
+      ],
+      "evidence": [
+        {
+          "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+          "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+          "sourceUrl": "https://github.com/builder-one/courierworld"
+        },
+        {
+          "id": "ship:c2b3ae76-1217-4e5a-85b8-bd47077edf11",
+          "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3Ac2b3ae76-1217-4e5a-85b8-bd47077edf11",
+          "sourceUrl": "https://robinhoodchain.blockscout.com/address/0x19716daade3f2979aaa4f69cc04e2a5c00e7d23e"
+        },
+        {
+          "id": "ship:318faf02-bdc7-40c7-916d-847b110927b5",
+          "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A318faf02-bdc7-40c7-916d-847b110927b5"
+        },
+        {
+          "id": "signal:13d77b52-75c8-4b38-99e8-69f724e229be",
+          "receiptUrl": "https://heyresearch.xyz/api/evidence/signal%3A13d77b52-75c8-4b38-99e8-69f724e229be"
+        },
+        {
+          "id": "state:323b18e6-517d-4e9f-bb28-060b213bb026:verification:28359",
+          "receiptUrl": "https://heyresearch.xyz/api/evidence/state%3A323b18e6-517d-4e9f-bb28-060b213bb026%3Averification%3A28359"
+        }
+      ],
+      "data": {
+        "identity": {
+          "slug": "courier-world",
+          "name": {
+            "text": "Courier World",
+            "contentOrigin": "external_source",
+            "source": "project_record"
+          },
+          "symbol": {
+            "text": "STAMP",
+            "contentOrigin": "external_source",
+            "source": "token_metadata"
+          },
+          "projectKind": "OTHER",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "narrative": {
+            "slug": "gaming",
+            "name": {
+              "text": "Gaming",
+              "contentOrigin": "derived"
+            }
+          },
+          "firstRecordedByHeyAt": "2026-10-10T10:20:17.539Z",
+          "websiteUrl": "https://courierworld.fun/",
+          "url": "https://heyresearch.xyz/project/courier-world"
+        },
+        "builderState": {
+          "activityStatus": "SHIPPING",
+          "activityMeasured": true,
+          "lastMeaningfulShipAt": "2026-10-12T19:23:25.000Z",
+          "meaningfulEvents30d": 3,
+          "buildMomentum": 49.5,
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_HELD",
+          "scoringVersion": "hbm-v28",
+          "explainUrl": "https://heyresearch.xyz/api/projects/courier-world/explain?fact=activity.status"
+        },
+        "latestMeaningfulChange": {
+          "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+          "revision": 12,
+          "type": "build.code_activity",
+          "domain": "build",
+          "occurredAt": "2026-10-12T19:23:25.000Z",
+          "precision": "WEEK",
+          "detectedAt": "2026-10-12T01:57:01.194Z",
+          "recordedAt": "2026-10-12T19:25:00.994Z",
+          "summary": {
+            "text": "Code changes, week of 2026-10-12 – 2026-10-18",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "countsAsBuilding": true,
+          "project": {
+            "slug": "courier-world",
+            "url": "https://heyresearch.xyz/project/courier-world"
+          },
+          "evidence": [
+            {
+              "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "sourceUrl": "https://github.com/builder-one/courierworld"
+            }
+          ],
+          "source": "github"
+        },
+        "recentChanges": {
+          "available": true,
+          "items": [
+            {
+              "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "revision": 12,
+              "type": "build.code_activity",
+              "domain": "build",
+              "occurredAt": "2026-10-12T19:23:25.000Z",
+              "precision": "WEEK",
+              "detectedAt": "2026-10-12T01:57:01.194Z",
+              "recordedAt": "2026-10-12T19:25:00.994Z",
+              "summary": {
+                "text": "Code changes, week of 2026-10-12 – 2026-10-18",
+                "contentOrigin": "derived"
+              },
+              "status": "FACT",
+              "countsAsBuilding": true,
+              "project": {
+                "slug": "courier-world",
+                "url": "https://heyresearch.xyz/project/courier-world"
+              },
+              "evidence": [
+                {
+                  "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+                  "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+                  "sourceUrl": "https://github.com/builder-one/courierworld"
+                }
+              ],
+              "source": "github"
+            },
+            {
+              "id": "signal:13d77b52-75c8-4b38-99e8-69f724e229be",
+              "revision": 1,
+              "type": "build.accelerating",
+              "domain": "build",
+              "occurredAt": "2026-10-12T04:10:07.360Z",
+              "precision": "WINDOW",
+              "detectedAt": "2026-10-12T04:10:10.267Z",
+              "recordedAt": "2026-10-12T04:10:26.077Z",
+              "summary": {
+                "text": "3 meaningful ships this week, 0 the week before",
+                "contentOrigin": "derived"
+              },
+              "status": "DERIVED",
+              "countsAsBuilding": false,
+              "project": {
+                "slug": "courier-world",
+                "url": "https://heyresearch.xyz/project/courier-world"
+              },
+              "evidence": [
+                {
+                  "id": "signal:13d77b52-75c8-4b38-99e8-69f724e229be",
+                  "receiptUrl": "https://heyresearch.xyz/api/evidence/signal%3A13d77b52-75c8-4b38-99e8-69f724e229be"
+                }
+              ],
+              "source": "hey_signal"
+            },
+            {
+              "id": "ship:318faf02-bdc7-40c7-916d-847b110927b5",
+              "revision": 6,
+              "type": "build.code_activity",
+              "domain": "build",
+              "occurredAt": "2026-10-11T18:33:22.000Z",
+              "precision": "WEEK",
+              "detectedAt": "2026-10-11T01:23:54.783Z",
+              "recordedAt": "2026-10-11T19:10:02.129Z",
+              "summary": {
+                "text": "Code changes, week of 2026-10-05 – 2026-10-11",
+                "contentOrigin": "derived"
+              },
+              "status": "FACT",
+              "countsAsBuilding": true,
+              "project": {
+                "slug": "courier-world",
+                "url": "https://heyresearch.xyz/project/courier-world"
+              },
+              "evidence": [
+                {
+                  "id": "ship:318faf02-bdc7-40c7-916d-847b110927b5",
+                  "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A318faf02-bdc7-40c7-916d-847b110927b5",
+                  "sourceUrl": "https://github.com/builder-one/courierworld"
+                }
+              ],
+              "source": "github"
+            },
+            {
+              "id": "ship:c2b3ae76-1217-4e5a-85b8-bd47077edf11",
+              "revision": 2,
+              "type": "contract.followup_deployed",
+              "domain": "contract",
+              "occurredAt": "2026-10-11T18:29:59.000Z",
+              "precision": "EXACT",
+              "detectedAt": "2026-10-12T04:05:05.155Z",
+              "recordedAt": "2026-10-12T04:10:26.077Z",
+              "summary": {
+                "text": "Deployed a new contract: CourierSkins",
+                "contentOrigin": "external_source",
+                "source": "source_title",
+                "sourceUrl": "https://robinhoodchain.blockscout.com/address/0x19716daade3f2979aaa4f69cc04e2a5c00e7d23e"
+              },
+              "status": "FACT",
+              "countsAsBuilding": true,
+              "project": {
+                "slug": "courier-world",
+                "url": "https://heyresearch.xyz/project/courier-world"
+              },
+              "evidence": [
+                {
+                  "id": "ship:c2b3ae76-1217-4e5a-85b8-bd47077edf11",
+                  "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3Ac2b3ae76-1217-4e5a-85b8-bd47077edf11",
+                  "sourceUrl": "https://robinhoodchain.blockscout.com/address/0x19716daade3f2979aaa4f69cc04e2a5c00e7d23e"
+                }
+              ],
+              "source": "explorer"
+            },
+            {
+              "id": "state:323b18e6-517d-4e9f-bb28-060b213bb026:verification:28359",
+              "revision": 1,
+              "type": "token.verification_changed",
+              "domain": "token",
+              "occurredAt": null,
+              "precision": "OBSERVED",
+              "detectedAt": "2026-10-11T04:13:37.101Z",
+              "recordedAt": "2026-10-11T04:15:33.069Z",
+              "summary": {
+                "text": "Token verification moved from Unverified to Verified",
+                "contentOrigin": "derived"
+              },
+              "status": "FACT",
+              "countsAsBuilding": false,
+              "project": {
+                "slug": "courier-world",
+                "url": "https://heyresearch.xyz/project/courier-world"
+              },
+              "evidence": [
+                {
+                  "id": "state:323b18e6-517d-4e9f-bb28-060b213bb026:verification:28359",
+                  "receiptUrl": "https://heyresearch.xyz/api/evidence/state%3A323b18e6-517d-4e9f-bb28-060b213bb026%3Averification%3A28359"
+                }
+              ],
+              "source": "hey_state"
+            }
+          ],
+          "url": "https://heyresearch.xyz/api/changes?project=courier-world"
+        },
+        "contractIdentity": {
+          "token": {
+            "chainId": 4663,
+            "address": "0xbab43af01c32a952ff14b395d026cf1874932bc5",
+            "verification": "VERIFIED",
+            "verificationReason": "deploy_record_in_own_repo"
+          },
+          "ownerVerified": false,
+          "contractsUrl": "https://heyresearch.xyz/api/projects/courier-world/contracts"
+        },
+        "marketContext": {
+          "contextOnly": true,
+          "valuation": {
+            "usd": 99516,
+            "kind": "fdv",
+            "source": "dexscreener",
+            "observedAt": "2026-10-12T19:44:25.993Z"
+          },
+          "valuationWithheld": null,
+          "liquidityUsd": 32418.9,
+          "liquidityKind": "market",
+          "volume24hUsd": 157535.65,
+          "tokenMarketStatus": "ACTIVE_MARKET",
+          "url": "https://heyresearch.xyz/api/projects/courier-world/market"
+        },
+        "usageContext": {
+          "contextOnly": true,
+          "state": "PARTIAL",
+          "reason": "collection_started_in_window",
+          "windowDays": 7,
+          "calls": 37470,
+          "activeContracts": 2,
+          "watchedContracts": 2,
+          "observedAt": "2026-10-12T01:00:58.902Z",
+          "url": "https://heyresearch.xyz/api/projects/courier-world/usage"
+        }
+      },
+      "methodology": {
+        "rules": [
+          {
+            "id": "activity.status",
+            "version": "hbm-v28"
+          },
+          {
+            "id": "research_summary",
+            "version": "summary-v1"
+          },
+          {
+            "id": "peers",
+            "version": "peers-v1"
+          },
+          {
+            "id": "agent_freshness",
+            "version": "agent-freshness-v2"
+          },
+          {
+            "id": "machine_text",
+            "version": "machine-text-v1"
+          }
+        ],
+        "url": "https://heyresearch.xyz/methodology"
+      },
+      "links": {
+        "self": "https://heyresearch.xyz/api/agent/research_project?project=courier-world",
+        "page": "https://heyresearch.xyz/project/courier-world",
+        "canonical": [
+          "https://heyresearch.xyz/api/projects/courier-world/snapshot",
+          "https://heyresearch.xyz/api/projects/courier-world/coverage",
+          "https://heyresearch.xyz/api/projects/courier-world/explain",
+          "https://heyresearch.xyz/api/changes?project=courier-world"
+        ]
+      },
+      "citation": {
+        "kind": "hey_agent_answer",
+        "capability": "research_project",
+        "schemaVersion": "1",
+        "url": "https://heyresearch.xyz/api/agent/research_project?project=courier-world",
+        "asOf": "2026-10-12T19:52:23.000Z",
+        "project": "courier-world",
+        "scoringVersion": "hbm-v28"
+      },
+      "boundaries": {
+        "notAdvice": true,
+        "notProvided": [
+          "investment_recommendation",
+          "buy_or_sell_signal",
+          "price_prediction",
+          "price_target",
+          "position_size",
+          "leverage",
+          "stop_loss",
+          "ranking_by_expected_return",
+          "risk_score",
+          "safety_verdict",
+          "smart_money_label",
+          "wallet_pnl",
+          "wallet_profile"
+        ],
+        "marketIsContextOnly": true,
+        "disclaimer": {
+          "text": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts.",
+          "contentOrigin": "hey"
+        }
+      },
+      "asOf": "2026-10-12T19:52:23.000Z"
+    }
+  }
+}

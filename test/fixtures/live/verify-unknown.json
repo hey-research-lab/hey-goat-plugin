@@ -1,0 +1,148 @@
+{
+  "request": {
+    "path": "/api/agent/verify_project",
+    "params": {
+      "address": "0x0000000000000000000000000000000000000001"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "x-request-id": "50c66dac-ccd9-46d7-a2ae-7ca9b7b3e5c8",
+      "x-hey-api-version": "1"
+    },
+    "body": {
+      "schema": "hey.agent-intelligence-response",
+      "schemaVersion": "1",
+      "capability": "verify_project",
+      "status": "ok",
+      "query": {
+        "chainId": 4663,
+        "address": "0x0000000000000000000000000000000000000001"
+      },
+      "chain": {
+        "chainId": 4663,
+        "name": "Robinhood Chain"
+      },
+      "subject": {
+        "kind": "contract",
+        "contract": {
+          "chainId": 4663,
+          "address": "0x0000000000000000000000000000000000000001"
+        }
+      },
+      "answer": {
+        "text": "UNKNOWN: HEY holds no record of this contract on a published project. Missing attribution is not evidence against it.",
+        "contentOrigin": "derived"
+      },
+      "answerStatus": "UNKNOWN",
+      "claims": [
+        {
+          "id": "verify.verdict",
+          "dimension": "contract",
+          "statement": {
+            "text": "UNKNOWN (no_record): HEY holds no record of this contract on a published project.",
+            "contentOrigin": "derived"
+          },
+          "status": "UNKNOWN",
+          "value": "UNKNOWN",
+          "source": null,
+          "observedAt": null,
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "unknown",
+          "evidence": [],
+          "evidenceKind": "not_held",
+          "reason": "no_record"
+        }
+      ],
+      "unknowns": [
+        {
+          "category": "UNKNOWN",
+          "dimension": "contractAttribution",
+          "statement": {
+            "text": "HEY cannot attribute this contract to one published project.",
+            "contentOrigin": "hey"
+          },
+          "doNotConclude": {
+            "text": "HEY cannot say. A missing value is not negative evidence.",
+            "contentOrigin": "hey"
+          },
+          "reason": "no_record"
+        }
+      ],
+      "freshness": [],
+      "evidence": [],
+      "data": {
+        "chainId": 4663,
+        "address": "0x0000000000000000000000000000000000000001",
+        "verdict": "UNKNOWN",
+        "reasonCode": "no_record",
+        "reasons": [
+          {
+            "text": "HEY holds no record of this contract on a published project.",
+            "contentOrigin": "hey"
+          }
+        ],
+        "recordedProject": null,
+        "askedProject": null,
+        "tokenVerification": null,
+        "activityAppliesToContract": null,
+        "contractUrl": "https://heyresearch.xyz/api/contracts/4663/0x0000000000000000000000000000000000000001",
+        "scanUrl": "https://heyresearch.xyz/scan/0x0000000000000000000000000000000000000001"
+      },
+      "methodology": {
+        "rules": [
+          {
+            "id": "agent_freshness",
+            "version": "agent-freshness-v2"
+          },
+          {
+            "id": "machine_text",
+            "version": "machine-text-v1"
+          }
+        ],
+        "url": "https://heyresearch.xyz/methodology"
+      },
+      "links": {
+        "self": "https://heyresearch.xyz/api/agent/verify_project?address=0x0000000000000000000000000000000000000001",
+        "canonical": [
+          "https://heyresearch.xyz/api/token/4663/0x0000000000000000000000000000000000000001",
+          "https://heyresearch.xyz/api/contracts/4663/0x0000000000000000000000000000000000000001"
+        ]
+      },
+      "citation": {
+        "kind": "hey_agent_answer",
+        "capability": "verify_project",
+        "schemaVersion": "1",
+        "url": "https://heyresearch.xyz/api/agent/verify_project?address=0x0000000000000000000000000000000000000001",
+        "asOf": "2026-10-12T19:52:34.003Z"
+      },
+      "boundaries": {
+        "notAdvice": true,
+        "notProvided": [
+          "investment_recommendation",
+          "buy_or_sell_signal",
+          "price_prediction",
+          "price_target",
+          "position_size",
+          "leverage",
+          "stop_loss",
+          "ranking_by_expected_return",
+          "risk_score",
+          "safety_verdict",
+          "smart_money_label",
+          "wallet_pnl",
+          "wallet_profile"
+        ],
+        "marketIsContextOnly": true,
+        "disclaimer": {
+          "text": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts.",
+          "contentOrigin": "hey"
+        }
+      },
+      "asOf": "2026-10-12T19:52:34.003Z"
+    }
+  }
+}

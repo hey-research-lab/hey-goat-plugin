@@ -1,0 +1,21 @@
+{
+  "_note": "Synthetic: a 500 from HEY, which the live API cannot be asked for.",
+  "request": {
+    "path": "/api/chain",
+    "params": { "days": 7 }
+  },
+  "response": {
+    "status": 500,
+    "headers": {
+      "content-type": "application/json",
+      "x-hey-api-version": "1",
+      "x-request-id": "00000000-0000-4000-8000-000000000500"
+    },
+    "body": {
+      "error": "internal_error",
+      "message": "Something went wrong on HEY's side.",
+      "requestId": "00000000-0000-4000-8000-000000000500",
+      "retryable": true
+    }
+  }
+}
