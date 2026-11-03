@@ -4,7 +4,16 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses
 [Semantic Versioning](https://semver.org/).
 
-## 0.1.0 — 2026-10-13
+## Unreleased
+
+- Security: `zod` moves from `^3.24.1` to `^4.6.7` (GHSA-mrhx-c7xc-m3w5, memory exhaustion on large
+  arrays, fixed only in 4.6.6). The parameter schemas import `zod/v3`, the zod 3 API zod 4 still ships,
+  because GOAT's peer is zod 3; the tools and their schemas are unchanged.
+- README: the package is not on npm yet, so Install says how to build it from this repository and
+  install the packed tarball.
+- Development: vitest 4.1.12.
+
+## 0.1.0 — 2026-10-13 (not on npm)
 
 First release.
 

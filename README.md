@@ -30,9 +30,19 @@ plugins do. An agent whose wallet is on another chain can still ask about Robinh
 
 ## Install
 
+The package is not on npm yet. Build it from this repository and install the packed tarball:
+
 ```sh
-npm install @hey-research-lab/goat-plugin @goat-sdk/core
+git clone https://github.com/hey-research-lab/hey-goat-plugin.git
+cd hey-goat-plugin
+corepack enable && pnpm install --frozen-lockfile && pnpm build
+npm pack                                   # writes hey-research-lab-goat-plugin-0.1.0.tgz
+
+# then, in your agent's project:
+npm install /path/to/hey-research-lab-goat-plugin-0.1.0.tgz @goat-sdk/core
 ```
+
+Once it is published, `npm install @hey-research-lab/goat-plugin @goat-sdk/core` will do the same.
 
 Node.js 22 or later. No API key is needed; a key from <https://heyresearch.xyz/account> only lifts
 the anonymous rate limit.
@@ -167,8 +177,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). `pnpm install && pnpm scan && pnpm lint 
 && pnpm test && pnpm build`; tests run against saved fixtures with the network blocked. Never
 commit a secret or a `.env` with values.
 
-Runtime dependencies: `@hey-research-lab/sdk` (the API client) and `zod` (the tools' parameter
-schemas, as GOAT requires). `@goat-sdk/core` is a peer dependency.
+Runtime dependencies: `@hey-research-lab/sdk` (the API client) and `zod` 4.6.7 or later, whose `zod/v3`
+API writes the tools' parameter schemas, because GOAT reads zod 3 schemas. `@goat-sdk/core` is a peer dependency.
 
 ## Links
 

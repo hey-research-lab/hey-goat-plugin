@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import type { ZodTypeAny } from 'zod';
+import type { ZodTypeAny } from 'zod/v3';
 
 import type { HeyToolResult } from '../src/index.js';
 import { ATTRIBUTION_RE, callTool, fixtureFetch, heyTools, liveIndex, noFetch } from './helpers.js';
@@ -86,7 +86,11 @@ describe('wording', () => {
     const tools = await heyTools({ fetchImpl: noFetch });
     const texts: string[] = [];
     for (const tool of tools.values()) {
-      texts.push(tool.name, tool.description, ...describeSchema(tool.parameters as ZodTypeAny));
+      texts.push(
+        tool.name,
+        tool.description,
+        ...describeSchema(tool.parameters as object as ZodTypeAny),
+      );
     }
     expect(texts.length).toBeGreaterThan(12);
     expect(texts.filter((t) => FORBIDDEN.test(t))).toEqual([]);

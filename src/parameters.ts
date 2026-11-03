@@ -1,5 +1,17 @@
 import { createToolParameters } from '@goat-sdk/core';
-import { z } from 'zod';
+import { z } from 'zod/v3';
+
+/**
+ * GOAT's `createToolParameters`, typed from this package's own zod. The schemas are written with zod 4's
+ * `zod/v3` API, which is the zod 3 API GOAT and its adapters read at run time (GOAT's peer is zod 3).
+ * GOAT types its argument from whichever `zod` the host resolves, so the schema meets that type once,
+ * here, by assertion, and the parameter class keeps the schema's own inferred shape.
+ */
+type GoatSchema = Parameters<typeof createToolParameters>[0];
+type ToolParameters<T extends z.ZodTypeAny> = { new (): z.infer<T>; schema: T };
+function toolParameters<T extends z.ZodTypeAny>(schema: T): ToolParameters<T> {
+  return createToolParameters(schema as object as GoatSchema) as unknown as ToolParameters<T>;
+}
 
 /*
  * Numbers carry the API's own bounds so a model sees them; slugs and addresses are checked when
@@ -23,11 +35,11 @@ const slug = z
     'The project\'s HEY slug, e.g. "courier-world": lowercase letters, digits and hyphens. Get it from hey_find_projects when you have a name, ticker or contract address.',
   );
 
-export class ResearchProjectParameters extends createToolParameters(
+export class ResearchProjectParameters extends toolParameters(
   z.object({ project: slug, chainId }),
 ) {}
 
-export class FindProjectsParameters extends createToolParameters(
+export class FindProjectsParameters extends toolParameters(
   z.object({
     query: z
       .string()
@@ -40,7 +52,7 @@ export class FindProjectsParameters extends createToolParameters(
   }),
 ) {}
 
-export class WhatChangedParameters extends createToolParameters(
+export class WhatChangedParameters extends toolParameters(
   z.object({
     project: slug
       .optional()
@@ -73,7 +85,7 @@ export class WhatChangedParameters extends createToolParameters(
   }),
 ) {}
 
-export class ProjectShipsParameters extends createToolParameters(
+export class ProjectShipsParameters extends toolParameters(
   z.object({
     project: slug,
     limit: z
@@ -92,7 +104,7 @@ export class ProjectShipsParameters extends createToolParameters(
   }),
 ) {}
 
-export class ChainOverviewParameters extends createToolParameters(
+export class ChainOverviewParameters extends toolParameters(
   z.object({
     days: z
       .number()
@@ -105,7 +117,7 @@ export class ChainOverviewParameters extends createToolParameters(
   }),
 ) {}
 
-export class LookupContractParameters extends createToolParameters(
+export class LookupContractParameters extends toolParameters(
   z.object({
     address: z
       .string()
