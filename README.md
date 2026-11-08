@@ -5,9 +5,9 @@ builder research on Robinhood Chain: is a project still building, what did it sh
 and what HEY does not know — each answer with its evidence ids, its HEY link and its as-of time.
 
 [![CI](https://github.com/hey-research-lab/hey-goat-plugin/actions/workflows/ci.yml/badge.svg)](https://github.com/hey-research-lab/hey-goat-plugin/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Node >= 22](https://img.shields.io/badge/node-%3E%3D22-informational.svg)](package.json)
-[![Robinhood Chain 4663](https://img.shields.io/badge/Robinhood%20Chain-4663-black.svg)](https://heyresearch.xyz)
+[![License: MIT](assets/badges/license-mit.svg)](LICENSE)
+[![Node >= 22](assets/badges/node-22.svg)](package.json)
+[![Robinhood Chain 4663](assets/badges/robinhood-chain-4663.svg)](https://heyresearch.xyz)
 
 ## Why it exists
 
