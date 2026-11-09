@@ -30,19 +30,9 @@ plugins do. An agent whose wallet is on another chain can still ask about Robinh
 
 ## Install
 
-The package is not on npm yet. Build it from this repository and install the packed tarball:
-
 ```sh
-git clone https://github.com/hey-research-lab/hey-goat-plugin.git
-cd hey-goat-plugin
-corepack enable && pnpm install --frozen-lockfile && pnpm build
-npm pack                                   # writes hey-research-lab-goat-plugin-0.1.0.tgz
-
-# then, in your agent's project:
-npm install /path/to/hey-research-lab-goat-plugin-0.1.0.tgz @goat-sdk/core
+npm install @hey-research-lab/goat-plugin @goat-sdk/core
 ```
-
-Once it is published, `npm install @hey-research-lab/goat-plugin @goat-sdk/core` will do the same.
 
 Node.js 22 or later. No API key is needed; a key from <https://heyresearch.xyz/account> only lifts
 the anonymous rate limit.

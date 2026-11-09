@@ -9,11 +9,11 @@ All notable changes to this project are documented here. The format follows
 - Security: `zod` moves from `^3.24.1` to `^4.6.7` (GHSA-mrhx-c7xc-m3w5, memory exhaustion on large
   arrays, fixed only in 4.6.6). The parameter schemas import `zod/v3`, the zod 3 API zod 4 still ships,
   because GOAT's peer is zod 3; the tools and their schemas are unchanged.
-- README: the package is not on npm yet, so Install says how to build it from this repository and
-  install the packed tarball.
+- README: Install is `npm install @hey-research-lab/goat-plugin @goat-sdk/core`; 0.1.0 has been on npm
+  since 2026-10-13.
 - Development: vitest 4.1.12.
 
-## 0.1.0 — 2026-10-13 (not on npm)
+## 0.1.0 — 2026-10-13
 
 First release.
 
