@@ -161,6 +161,8 @@ See [SECURITY.md](SECURITY.md). Each tool makes one HTTPS GET to `https://heyres
 gives up after 15 seconds. It reads and writes no files, spawns no processes, keeps no state, and
 never logs the API key.
 
+HEY Research Lab also reviews other projects' code and reports what it finds privately first: [security credits](https://github.com/hey-research-lab#security-credits).
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). `pnpm install && pnpm scan && pnpm lint && pnpm typecheck
