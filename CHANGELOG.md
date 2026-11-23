@@ -6,6 +6,12 @@ All notable changes to this project are documented here. The format follows
 
 ## Unreleased
 
+## 0.1.1 — 2026-11-24
+
+- Security: dependency updates (development only: `ai` moves from 4.0.3 to `^5.0.52`,
+  GHSA-rwvc-j5jr-mgvh, through the devDependency and a pnpm override, since
+  `@goat-sdk/adapter-vercel-ai` pins `ai` 4.0.3; the adapter test runs against it). The published
+  package's runtime dependencies are unchanged.
 - Security: `zod` moves from `^3.24.1` to `^4.6.7` (GHSA-mrhx-c7xc-m3w5, memory exhaustion on large
   arrays, fixed only in 4.6.6). The parameter schemas import `zod/v3`, the zod 3 API zod 4 still ships,
   because GOAT's peer is zod 3; the tools and their schemas are unchanged.

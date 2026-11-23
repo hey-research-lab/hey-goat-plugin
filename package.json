@@ -1,6 +1,6 @@
 {
   "name": "@hey-research-lab/goat-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "GOAT SDK plugin for HEY Research Lab: Robinhood Chain builder research for AI agents — is a project still building, what it shipped, what changed and what HEY does not know, with evidence ids and links.",
   "license": "MIT",
   "author": "HEY Research Lab",
@@ -77,7 +77,7 @@
     "@goat-sdk/core": "0.5.0",
     "@swc/core": "^1.15.0",
     "@types/node": "^22.10.0",
-    "ai": "4.0.3",
+    "ai": "^5.0.52",
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.4.2",
@@ -91,7 +91,8 @@
     "overrides": {
       "esbuild": "^0.28.1",
       "jsondiffpatch": "^0.7.6",
-      "minimatch@>=7.0.0 <11.0.1": "^11.0.1"
+      "minimatch@>=7.0.0 <11.0.1": "^11.0.1",
+      "ai": "^5.0.52"
     }
   }
 }

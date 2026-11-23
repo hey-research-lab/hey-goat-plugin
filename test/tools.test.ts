@@ -47,8 +47,8 @@ describe('hey_research_project', () => {
     // One SDK read, identified as this plugin, with no key.
     expect(calls).toHaveLength(1);
     const headers = new Headers(calls[0]?.init?.headers);
-    expect(headers.get('x-hey-integration')).toBe('hey-goat-plugin/0.1.0');
-    expect(headers.get('user-agent')).toMatch(/^hey-goat-plugin\/0\.1\.0 hey-research-sdk\//);
+    expect(headers.get('x-hey-integration')).toBe('hey-goat-plugin/0.1.1');
+    expect(headers.get('user-agent')).toMatch(/^hey-goat-plugin\/0\.1\.1 hey-research-sdk\//);
     expect(headers.get('authorization')).toBeNull();
   });
 });
