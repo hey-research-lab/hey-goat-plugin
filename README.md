@@ -20,7 +20,7 @@ words, states and gaps reach the model intact.
 
 ## Why Robinhood Chain only
 
-HEY researches one chain: Robinhood Chain, chain id `4663` (`eip155:4663`). Every tool reads its
+HEY's API and this plugin answer for one chain: Robinhood Chain, chain id `4663` (`eip155:4663`). Every tool reads its
 project slugs and addresses as Robinhood Chain ones. Each tool takes an optional `chainId`; any
 value other than `4663` is answered with `unsupported_chain` and no request is made.
 
